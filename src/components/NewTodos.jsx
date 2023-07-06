@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 
-export default function NewTodos() {
+export default function NewTodos(props) {
     const [todo,setTodo]=useState({title:'',description:''})
     const {title,description}=todo
     const handleSubmit=(e)=>{
         console.log("submited")
         e.preventDefault()
-        console.log(todo)
+        props.onTodo(todo)
         setTodo({title:'',description:''})
     }
     const handleChange=(e)=>{
