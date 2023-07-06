@@ -1,5 +1,6 @@
 import React from 'react'
 import Todos from './Todos'
+import NewTodos from './NewTodos'
 
 export default function Home() {
     const dummytodos=[
@@ -16,7 +17,9 @@ export default function Home() {
     ]
   return (
     <div>
+        <NewTodos />
         <Todos todos={dummytodos} />
+
     </div>
   )
 }
